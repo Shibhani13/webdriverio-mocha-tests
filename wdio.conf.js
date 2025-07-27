@@ -41,6 +41,7 @@ exports.config = {
 
   // take screenshot on failure
   // Default will take only current view port & png
+  // browser.saveScreenshot(filepath, { fullPage: true}) - To take full page
   // {format: 'jpeg'}
   // Quality of the screenshot in case of JPEG format in range 0-100 percent - { quality: 100} ; 
   // clipping a rectangle of the screenshot { clip: { x: 0, y: 0, width: 100, height: 100 } }
@@ -49,7 +50,7 @@ exports.config = {
   if (error) {
     const timestamp = new Date().toLocaleString().replace(/[\/:, ]/g, '-');
     const filepath = `./errorScreenshots/${test.title}-${timestamp}.png`; // change this extension for jpeg
-    await browser.saveScreenshot(filepath, { fullPage: true});
+    await browser.saveScreenshot(filepath);
   }
 }
 }
