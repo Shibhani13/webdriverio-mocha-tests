@@ -24,7 +24,7 @@ exports.config = {
     // browserName: 'firefox',
     // 'wdio:specs': ['./tests/specs/group1/*.js'],
     // 'moz:firefoxOptions': {
-    //   args: ['-headless', '--width=1280', '--height=800']
+    //   args: ['--headless', '--width=1280', '--height=800']
     //   }
     // }
   ],

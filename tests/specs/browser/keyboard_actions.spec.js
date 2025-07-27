@@ -1,3 +1,4 @@
+//Code works only in non-headless mode
 const browserPage = require('../../pages/browser.page');
 describe('Keyboard commands @keys', () => {
   before(async () => {
@@ -8,19 +9,17 @@ describe('Keyboard commands @keys', () => {
   it('To check keyboard actions- tab', async () => {
     await browser.keys('Tab');
     console.log(await browserPage.getEventCode());
-    await browser.keys('Back space');
+    await browser.keys('Backspace');
     console.log(await browserPage.getEventCode());
   });
 
   it('Combination of keys', async () => {
-    await browser.debug();
     await browser.keys(['Command', 'a']);
     console.log(await browserPage.getEventCode());
     await browser.keys('NULL');   // Always reset keys after combos
   });
 
   it('Navigation keys', async () => {
-    await browser.debug();
     await browser.keys('Left arrow');
     console.log(await browserPage.getEventCode());
     await browser.keys('Right arrow');
@@ -32,7 +31,6 @@ describe('Keyboard commands @keys', () => {
   });
 
   it('Other keys', async () => {
-    await browser.debug();
     await browser.keys('Command');
     console.log(await browserPage.getEventCode());
     await browser.keys('Meta'); // same as command key

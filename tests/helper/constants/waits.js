@@ -1,0 +1,5 @@
+module.exports = {
+  SHORT_WAIT: 3000, // 3 SECONDS
+  SHORTER_WAIT: 5000, // 5 SECONDS
+  LONG_WAIT: 10000
+};
