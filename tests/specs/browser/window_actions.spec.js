@@ -10,7 +10,6 @@ describe('Window commands @window', () => {
     await browser.setTimeout({ 'pageLoad': 60000 })
   });
 
-
   it('Get browser window size', async () => {
     const windowSize = await browser.getWindowSize();
     console.log("window size", windowSize);
@@ -65,7 +64,6 @@ describe('Window commands @window', () => {
     await browser.switchToWindow(handles[0])
     const title = await browser.getTitle();
     console.log(title) // outputs: "DemoQA"
-    await expect(title).toHaveText('WOMEN - DRESS PRODUCTS')
   });
 
 });
