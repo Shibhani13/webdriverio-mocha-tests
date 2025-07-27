@@ -3,7 +3,7 @@ describe('Selectors of different types @selectors', () => {
     await browser.url("https://automationexercise.com/");
     const headerSection = await $('.header-middle');
     await headerSection.waitForExist({ timeout: 10000 });
-
+    console.log("------selectors.spec-------");
   });
 
   async function getTextOfElementsInArray(arr) {
