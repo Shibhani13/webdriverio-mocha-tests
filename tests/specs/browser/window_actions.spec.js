@@ -1,11 +1,13 @@
 const browserPage = require('../../pages/browser.page');
 const commonHelper = require('../../helper/commonHelper');
+const websiteConstants = require('../../helper/constants/websites');
 
 describe('Window commands @window', () => {
   before(async () => {
-    await browser.url("https://demoqa.com/browser-windows");
+    await browser.url(websiteConstants.WINDOWS_DEMO_URL);
     // Hide ads
     await commonHelper.hideAds();
+    await browser.setTimeout({ 'pageLoad': 60000 })
   });
 
 

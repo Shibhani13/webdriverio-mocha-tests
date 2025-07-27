@@ -1,9 +1,10 @@
+const websiteConstants = require('../../helper/constants/websites');
+
 describe('Element actions @element_actions', () => {
   before(async () => {
-    await browser.url("https://automationexercise.com/");
+    await browser.url(websiteConstants.AUTOMATION_EXERCISE_URL);
     const headerSection = await $('.header-middle');
     await headerSection.waitForExist({ timeout: 10000 });
-    console.log("------Element actions spec-------");
   });
 
   it('Find single element', async () => {

@@ -1,7 +1,9 @@
+const websiteConstants = require('../../helper/constants/websites');
+
 describe('Cookies @cookie', () => {
   let cookies;
   before(async () => {
-    await browser.url("https://automationexercise.com/");
+    await browser.url(websiteConstants.AUTOMATION_EXERCISE_URL);
     const headerSection = await $('.header-middle');
     await headerSection.waitForExist({ timeout: 10000 });
   });

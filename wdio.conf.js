@@ -1,8 +1,5 @@
 exports.config = {
   runner: 'local',
-  timeouts: {
-    pageLoad: 120000, // 60 seconds
-  },
 
   // 	•	Each inner array represents a group of specs that run in the same worker (shared browser).
 	// •	File paths inside specs should be relative to the root where the config file lives or be absolute paths.

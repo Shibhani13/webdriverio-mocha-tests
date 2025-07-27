@@ -1,8 +1,10 @@
 //Code works only in non-headless mode
 const browserPage = require('../../pages/browser.page');
+const websiteConstants = require('../../helper/constants/websites');
+
 describe('Keyboard commands @keys', () => {
   before(async () => {
-    await browser.url("https://www.toptal.com/developers/keycode");
+    await browser.url(websiteConstants.KEYBOARD_ACTIONS_URL);
     await browser.keys('Enter');
   });
 

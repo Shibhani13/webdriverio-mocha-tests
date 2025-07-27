@@ -1,7 +1,8 @@
-describe('Shadow DOM elements', () => {
+const websiteConstants = require('../../helper/constants/websites');
 
+describe('Shadow DOM elements', () => {
   it('Shadow DOM elements using deep nested locators (old version) @shadow_elements', async () => {
-    await browser.url('https://shop.polymer-project.org/');
+    await browser.url(websiteConstants.SHADOW_DOM_URL);
     await browser.pause(10000);
     const shopNowButton = await $('shop-app').shadow$('iron-pages > shop-home').shadow$('a[aria-label="Men\'s Outerwear Shop Now"]');
     // or await $('shop-app').shadow$('shop-home').shadow$('a[aria-label="Men\'s Outerwear Shop Now"]');
